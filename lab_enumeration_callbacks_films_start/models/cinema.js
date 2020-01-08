@@ -49,18 +49,11 @@ Cinema.prototype.totalRunningLength = function () {
 };
 
 
-
-
-Cinema.prototype.filterFilmsByGenre = function (property, value) {
-    const byProperty = this.films.filter((film) => {
-      
-
-    })
-    return filmsByGenre;
+Cinema.prototype.filterByProperty = function (filterType, value) {
+  const result = this.films.filter((film) => {
+    return value === film[filterType];
+  })
+  return result;
 };
-
-// for every property passed in give back its value,
-// pass in genre and get back drama
-// reduce the array to match a property
 
 module.exports = Cinema;
